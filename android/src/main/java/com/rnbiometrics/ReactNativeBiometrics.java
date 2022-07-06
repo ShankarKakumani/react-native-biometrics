@@ -196,9 +196,9 @@ public class ReactNativeBiometrics extends ReactContextBaseJavaModule {
 
     private int getAllowedAuthenticators(boolean allowDeviceCredentials) {
         if (allowDeviceCredentials && !isCurrentSDK29OrEarlier()) {
-            return BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.BIOMETRIC_WEEK | BiometricManager.Authenticators.DEVICE_CREDENTIAL;
+            return BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.BIOMETRIC_WEAK | BiometricManager.Authenticators.DEVICE_CREDENTIAL;
         }
-        return BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.BIOMETRIC_WEEK;
+        return BiometricManager.Authenticators.BIOMETRIC_STRONG | BiometricManager.Authenticators.BIOMETRIC_WEAK;
     }
 
     private boolean isCurrentSDK29OrEarlier() {
